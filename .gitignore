@@ -1,0 +1,48 @@
+# =====================================================================
+# SYSTEM ARCHITECTURE BINARIES (Compiled Executables)
+# =====================================================================
+*.out
+*.exe
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+parallel_cg
+
+# =====================================================================
+# PYTHON VIRTUAL ENVIRONMENTS & RUNTIME CACHES
+# =====================================================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+
+# =====================================================================
+# HEAVY COMPUTATIONAL DATA & PLOT OUTPUTS
+# =====================================================================
+*.log
+*.csv
+*.dat
+*.npy
+*.npz
+*.png
+*.jpg
+*.pdf
+.ipynb_checkpoints/
+
+# =====================================================================
+# LOCAL DEVELOPER ENVIRONMENT & IDE METADATA
+# =====================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
