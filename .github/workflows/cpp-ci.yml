@@ -1,0 +1,46 @@
+name: Multiphysics Solvers Automated Verification Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone Repository Codebase
+      uses: actions/checkout@v4
+
+    - name: Set Up Python Operational Runtime
+      uses: actions/setup-python@v5
+      with:
+        python-state: '3.10'
+
+    - name: Validate Python Multiphysics Scripts Syntax
+      run: |
+        python -m pip install --upgrade pip
+        # Check basic compile-time syntax errors across your scripts
+        python -m py_compile 02_numerical_discretization/1d_heat_fdm_solver.py
+        python -m py_compile 03_computational_multiphysics/transient_fsi_vibration.py
+        python -m py_compile 03_computational_multiphysics/high_speed_multiphysics.py
+        python -m py_compile 04_reactive_and_phase_change/reactive_boiling_engine.py
+        python -m py_compile 05_high_performance_computing/parallel_matrix_core.py
+
+    - name: Install C++ High-Performance GNU Compilers
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential libomp-dev
+
+    - name: Compile 5-Million Element Krylov Solver (C++ with OpenMP)
+      run: |
+        g++ -O3 -fopenmp 05_high_performance_computing/parallel_cg.cpp -o parallel_cg
+
+    - name: Profile C++ Krylov Core Multi-Threaded Execution
+      env:
+        OMP_NUM_THREADS: 4  # Bind simulation loops to parallel cloud processors
+      run: |
+        ./parallel_cg
+        
