@@ -101,7 +101,7 @@ python ./05_high_performance_computing/gpu_cg_core.py
 Distributed under the open-source MIT Software License. Review the root `LICENSE` file for detailed developer rights mappings.
 
 
-
+```
 
 
 # Step 1: Initialize local git matrix tracking
@@ -120,3 +120,4 @@ git remote add origin https://github.com
 # Step 5: Upload your entire multiphysics workspace securely online
 git push -u origin main
 
+```
