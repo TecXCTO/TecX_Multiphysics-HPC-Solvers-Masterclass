@@ -40,7 +40,7 @@ TecX_Multiphysics-HPC-Solvers-Masterclass/
 
 Welcome to the definitive repository for advanced continuous mechanics modeling, numerical discretization schemes, and parallelized Krylov subspace solvers. This repository tracks the full evolutionary lifecycle of advanced scientific engineering simulations: transitioning from pencil-and-paper continuous calculus, through numerical discretization matrices, up to distributed-memory high-performance computing (HPC) clusters.
 
-## 🚀 Repository Capabilities Architecture
+## Repository Capabilities Architecture
 * **Continuum Mechanics Engines**: Implementations mapping multi-phase Navier-Stokes equations, compressible Euler vectors, and structural elastodynamics equations.
 * **Transient Multi-Physics Fields**: 2D/3D matrix assembly methods for Fluid-Structure Interaction (FSI), active vibration damping controllers, and Arbitrary Lagrangian-Eulerian (ALE) grid warping arrays.
 * **Advanced Non-Linear Closures**: High-fidelity modules modeling 5th-Order WENO shock-capturing, PLIC geometric boundary reconstructions, thermal Lee boiling dynamics, and Arrhenius combustion kinetics.
@@ -48,7 +48,7 @@ Welcome to the definitive repository for advanced continuous mechanics modeling,
 
 ---
 
-## 📂 Core Folder Guide & Learning Path
+## Core Folder Guide & Learning Path
 
 ### [01. Theory & Calculus](./01_theory_and_calculus/)
 * **Foundations**: Derivation of the Material Derivative operator connecting Lagrangian particle arrays to fixed Eulerian calculation windows:
@@ -74,7 +74,7 @@ Welcome to the definitive repository for advanced continuous mechanics modeling,
 
 ---
 
-## 🛠️ Execution & Environment Controls
+## Execution & Environment Controls
 
 ### Running the Multi-Core CPU C++ Solvers
 To compile and execute the parallelized 5-million element Conjugate Gradient engine on any multi-core modern CPU architecture:
@@ -92,10 +92,10 @@ python ./05_high_performance_computing/gpu_cg_core.py
 
 ---
 
-## 📜 Academic Reference Literature
+## Academic Reference Literature
 1. *An Introduction to Computational Fluid Dynamics: The Finite Volume Method* — H. Versteeg & W. Malalasekera.
 2. *The Finite Element Method for Solid and Structural Mechanics* — O.C. Zienkiewicz & R.L. Taylor.
 3. *Iterative Methods for Sparse Linear Systems* — Y. Saad (The foundational handbook for Krylov subspace, CG, and GMRES mechanics).
 
-## 🪪 License
+## License
 Distributed under the open-source MIT Software License. Review the root `LICENSE` file for detailed developer rights mappings.
